@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{5CD034C8-A242-4BD6-94F4-F20C655A69E8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sandbox</RootNamespace>
+    <AssemblyName>SpaceEngineers</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <ApplicationIcon>SpaceEngineers.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>162,612,618,429,414,169,649</NoWarn>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release\Bin\</OutputPath>
+    <DefineConstants>WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>162,612,618,429,414,169,649</NoWarn>
+    <DebugSymbols>false</DebugSymbols>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\Bin64\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>162,612,618,429,414,169,649</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\Bin64\</OutputPath>
+    <DefineConstants>WINDOWS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <NoWarn>162,612,618,429,414,169,649</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Official|x86'">
+    <OutputPath>$(SolutionDir)Output\Bin\</OutputPath>
+    <DefineConstants>WINDOWS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <NoWarn>162,612,618,429,414,169,649</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release Official|x64'">
+    <OutputPath>$(SolutionDir)Output\Bin64\</OutputPath>
+    <DefineConstants>WINDOWS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <NoWarn>162,612,618,429,414,169,649</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_XB1|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug_XB1\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;XB1;XB1_TMP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_XB1|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug_XB1\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;XB1;XB1_TMP</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_XB1|x64'">
+    <OutputPath>bin\x64\Release_XB1\</OutputPath>
+    <DefineConstants>TRACE;XB1;XB1_TMP</DefineConstants>
+    <DocumentationFile>bin\x64\Release\VRage.Game.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_XB1|x86'">
+    <OutputPath>bin\x86\Release_XB1\</OutputPath>
+    <DefineConstants>TRACE;XB1;XB1_TMP</DefineConstants>
+    <DocumentationFile>bin\x86\Release\VRage.Game.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ContentPath>$(MSBuildProjectDirectory)\Content</ContentPath>
+    <EffectsFromSources>true</EffectsFromSources>
+    <DataFromSources>true</DataFromSources>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>..\..\3rd\SharpDX\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\Data\Scripts\StatLogic\SpaceStatEffect.cs" />
+    <Compile Include="MyProgram.cs" />
+    <Compile Include="GUI\DebugScreens\MyGuiScreenDebugShipLargeProperties.cs" />
+    <Compile Include="GUI\DebugScreens\MyGuiScreenDebugShipSmallProperties.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="eula.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameThumbnail.png" />
+    <Content Include="SpaceEngineers.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="App.config" />
+    <None Include="Content\Data\Audio_gui.sbc" />
+    <None Include="Content\Data\Audio_music.sbc" />
+    <None Include="Content\Data\Audio_player.sbc" />
+    <None Include="Content\Data\Audio_shipSounds.sbc" />
+    <None Include="Content\Data\Characters_animals.sbc" />
+    <None Include="Content\Data\Decals.sbc" />
+    <None Include="Content\Data\DefinitionsToPreload.sbc" />
+    <None Include="Content\Data\DroneBehaviors.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\EntityComponents.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\EntityContainers.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Environment\EnvironmentModules.sbc" />
+    <None Include="Content\Data\Environment\VoxelMapCollections.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Environment\PhysicalModelCollections.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Environment\PhysicalModels_Trees.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Environment\PhysicalModels_Bushes.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Environment\VoxelMapCollections.sbc" />
+    <None Include="Content\Data\GoodAIControlHandTools.sbc" />
+    <None Include="Content\Data\AmmoMagazines.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Ammos.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Animations.sbc" />
+    <None Include="Content\Data\Audio.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\BlockCategories.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\BlueprintClasses.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Blueprints.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Bushes.sbc" />
+    <None Include="Content\Data\Characters.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Components.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Configuration.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\ContainerTypes.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\CubeBlocks.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\DebrisModels.sbc" />
+    <None Include="Content\Data\Edges.sbc" />
+    <None Include="Content\Data\Environment.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\EnvironmentItemClasses.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\GasProperties.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\GlobalEvents.sbc" />
+    <None Include="Content\Data\HandItems.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Localization\MyTexts.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\MaterialProperties.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Particles.sbc" />
+    <None Include="Content\Data\PhysicalItems.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\PhysicalMaterials.sbc" />
+    <None Include="Content\Data\PlanetGeneratorDefinitions.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Prefabs\Base1.sbc" />
+    <None Include="Content\Data\Prefabs\Base4.sbc" />
+    <None Include="Content\Data\Prefabs\BaseEasyStart1.sbc" />
+    <None Include="Content\Data\Prefabs\BaseLoneSurvivor.sbc" />
+    <None Include="Content\Data\Prefabs\CargoShip.sbc" />
+    <None Include="Content\Data\Prefabs\ConstructionShip.sbc" />
+    <None Include="Content\Data\Prefabs\EasyStart1Objects.sbs" />
+    <None Include="Content\Data\Prefabs\Fighter.sbc" />
+    <None Include="Content\Data\Prefabs\Fighter2.sbc" />
+    <None Include="Content\Data\Prefabs\LargeShipBlue.sbc" />
+    <None Include="Content\Data\Prefabs\LargeShipRed.sbc" />
+    <None Include="Content\Data\Prefabs\LargeShipRedBuilding.sbc" />
+    <None Include="Content\Data\Prefabs\LargeShipRedCrashed.sbc" />
+    <None Include="Content\Data\Prefabs\LargeShipRedQS1.sbc" />
+    <None Include="Content\Data\Prefabs\LargeShipUnderConstruction.sbc" />
+    <None Include="Content\Data\Prefabs\Military1.sbc" />
+    <None Include="Content\Data\Prefabs\Military2.sbc" />
+    <None Include="Content\Data\Prefabs\Military3.sbc" />
+    <None Include="Content\Data\Prefabs\MinerSmallShip.sbc" />
+    <None Include="Content\Data\Prefabs\Mining1.sbc" />
+    <None Include="Content\Data\Prefabs\Mining2.sbc" />
+    <None Include="Content\Data\Prefabs\Mining3.sbc" />
+    <None Include="Content\Data\Prefabs\NewLargeShipPrefab.sbc" />
+    <None Include="Content\Data\Prefabs\NewLargeShipPrefabSurvival.sbc" />
+    <None Include="Content\Data\Prefabs\NewSmallShipPrefab.sbc" />
+    <None Include="Content\Data\Prefabs\NewSmallShipPrefabSurvival.sbc" />
+    <None Include="Content\Data\Prefabs\NewStationPrefab.sbc" />
+    <None Include="Content\Data\Prefabs\NewStationPrefabSurvival.sbc" />
+    <None Include="Content\Data\Prefabs\RespawnShip.sbc" />
+    <None Include="Content\Data\Prefabs\Small Ship 5418.sbc" />
+    <None Include="Content\Data\Prefabs\SmallShip_SingleBlock.sbc" />
+    <None Include="Content\Data\Prefabs\SpawnShipAssembler.sbc" />
+    <None Include="Content\Data\Prefabs\SpawnShipDrill.sbc" />
+    <None Include="Content\Data\Prefabs\SpawnShipEscapePod.sbc" />
+    <None Include="Content\Data\Prefabs\SpawnShipRefineryAssembler.sbc" />
+    <None Include="Content\Data\Prefabs\Station_8315622.sbc" />
+    <None Include="Content\Data\Prefabs\SuicideShip.sbc" />
+    <None Include="Content\Data\Prefabs\Trade1.sbc" />
+    <None Include="Content\Data\Prefabs\Trade2.sbc" />
+    <None Include="Content\Data\Prefabs\Trade3.sbc" />
+    <None Include="..\MedievalEngineers\Content\Data\RespawnShips.sbc">
+      <Link>Content\Data\RespawnShips.sbc</Link>
+    </None>
+    <None Include="Content\Data\ResourceDistributionGroups.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Scenarios.sbx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Screens\CubeBuilder.gsc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Screens\CubeBuilderBar.gsc" />
+    <None Include="Content\Data\Screens\DialogAmount.gsc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Screens\JoinScreen.gsc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Screens\MedicalsScreen.gsc" />
+    <None Include="Content\Data\ShipSoundGroups.sbc" />
+    <None Include="Content\Data\SoundBlock.sbc" />
+    <None Include="Content\Data\SpawnGroups.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Stats.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\ShadowTextureSets.sbc" />
+    <None Include="Content\Data\TransparentMaterials.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Trees.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\VoxelMaterialChanges.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\VoxelMaterials.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Weapons.sbc">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="steam_api64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="steam_api.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PrepareScriptMod.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="steam_appid.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Data\Localization\MyVRTexts.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Content\Data\Localization\VRDataTexts.resx">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sandbox.Common\Sandbox.Common.csproj">
+      <Project>{2C96F0AB-7962-4B73-A075-B0E0B09F6195}</Project>
+      <Name>Sandbox.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.Game\Sandbox.Game.csproj">
+      <Project>{f77d0a49-f0a1-4e8a-80c8-cbe1842bf2d4}</Project>
+      <Name>Sandbox.Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sandbox.Graphics\Sandbox.Graphics.csproj">
+      <Project>{f77d0a49-f0a1-4e8a-80c8-cbe1842ba2d4}</Project>
+      <Name>Sandbox.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaceEngineers.Game\SpaceEngineers.Game.csproj">
+      <Project>{9f620aab-5008-4d91-8d8f-8be6cf26f926}</Project>
+      <Name>SpaceEngineers.Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRage.Game\VRage.Game.csproj">
+      <Project>{4539b5f0-3316-40e6-b032-9fbcafaac5be}</Project>
+      <Name>VRage.Game</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRage.Render11\VRage.Render11.csproj">
+      <Project>{a5a97aa5-e974-479e-bf93-1202393a4a06}</Project>
+      <Name>VRage.Render11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRage.Render\VRage.Render.csproj">
+      <Project>{1713e6cd-808a-4a44-9532-04771499bb01}</Project>
+      <Name>VRage.Render</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRage\VRage.csproj">
+      <Project>{1C814936-C9A7-4FAF-B543-28F021D98B6C}</Project>
+      <Name>VRage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRage.Library\VRage.Library.csproj">
+      <Project>{26FE022E-42AB-40BE-BA9D-97CBE34E7D99}</Project>
+      <Name>VRage.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRage.Math\VRage.Math.csproj">
+      <Project>{40CE67D5-C89F-4A56-AE52-85DB1BEA07FE}</Project>
+      <Name>VRage.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XB1Interface\XB1Interface.csproj" Condition="('$(Configuration)' == 'Debug_XB1') Or ('$(Configuration)' == 'Release_XB1')">
+      <Project>{b6068a9d-54a1-425a-9dfb-87fd9ec5e822}</Project>
+      <Name>XB1Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(SolutionDir)\global.props" Condition="exists('$(SolutionDir)\global.props')" />
+  </ImportGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <!-- Recreate content dir -->
+    <RemoveDir Directories="$(OutDir)..\Content" ContinueOnError="true" />
+    <MakeDir Directories="$(OutDir)..\Content" />
+    <!-- Link Data and Effects from original source (always from source location) -->
+    <RemoveDir Directories="$(OutDir)..\Content\Shaders" ContinueOnError="true" />
+    <Exec Command="mklink /J &quot;$(OutDir)..\Content\Data&quot; &quot;$(ProjectDir)Content\Data&quot;" IgnoreExitCode="true" Condition="$(DataFromSources)==true" />
+    <Exec Command="mklink /J &quot;$(OutDir)..\Content\Shaders&quot; &quot;..\VRage.Render11\Shaders&quot;" IgnoreExitCode="true" Condition="$(EffectsFromSources)==true" />
+    <!-- This will create link for common texts -->
+    <RemoveDir Directories="$(OutDir)..\Content\Data\Localization\Common" ContinueOnError="true" />
+    <Exec Command="mklink /J &quot;$(OutDir)..\Content\Data\Localization\Common&quot; &quot;$(ProjectDir)..\VRage.Game\Content\Data\Localization&quot;" IgnoreExitCode="true" />
+    <!-- Link the rest of content subdirs (on GitHub, this is linked from Steam; on SVN this is linked from source location) -->
+    <ItemGroup>
+      <ContentSubdirs Include="$([System.IO.Directory]::GetDirectories(&quot;$(ContentPath)&quot;))" />
+    </ItemGroup>
+    <Exec Command="mklink /J &quot;$(OutDir)..\Content\$([System.IO.Path]::GetFilename(%(ContentSubdirs.Identity)))&quot; &quot;%(ContentSubdirs.Identity)&quot;" IgnoreExitCode="true" />
+    <Exec Command="echo %time% Content copied" />
+    <!-- Copy redists -->
+    <ItemGroup>
+      <Redists86 Include="$(ProjectDir)Redists\x86\*.*" />
+      <Redists64 Include="$(ProjectDir)Redists\x64\*.*" />
+      <BrainSimulatorBinaries Include="$(ProjectDir)..\..\3rd\BrainSimulator\**\*.*" />
+    </ItemGroup>
+    <Copy Condition="'$(Configuration)|$(Platform)' == 'Release Official|x86'" SourceFiles="@(Redists86)" DestinationFolder="$(OutDir)" />
+    <Copy Condition="'$(Configuration)|$(Platform)' == 'Release Official|x64'" SourceFiles="@(Redists64)" DestinationFolder="$(OutDir)" />
+    <Copy Condition="'$(Configuration)|$(Platform)' == 'Release Official|x64'" SourceFiles="@(BrainSimulatorBinaries)" DestinationFolder="$(OutDir)%(RecursiveDir)" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y /s "$(ProjectDir)..\..\3rd\SQLite\*.*" "$(TargetDir)"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
